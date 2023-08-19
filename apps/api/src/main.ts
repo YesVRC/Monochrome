@@ -7,7 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api')
   app.use(cookieParser());
-  //app.enableCors({credentials: true, origin: ['http://localhost:5173', 'https://monovrc.com', "http://monovrc.com", 'https://api.monovrc.com', "http://api.monovrc.com"]})
+  app.enableCors({credentials: true, origin: ['http://localhost:5173', 'https://monovrc.com','https://www.monovrc.com', "http://monovrc.com", 'https://api.monovrc.com', "http://api.monovrc.com"]})
   const config = new DocumentBuilder()
     .setTitle('MonoVRC')
     .setDescription('API backend for the MonoVRC website')

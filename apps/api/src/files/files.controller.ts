@@ -38,4 +38,5 @@ export class FilesController {
     await this.fileService.GetFilesByDir(res, 'posters/');
   }
 
+
 }

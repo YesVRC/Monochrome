@@ -18,18 +18,20 @@ export class FilesService {
   }
 
   async GetFileURLByName(name: string) {
-    return `http://content.monovrc.com/monovrc/${name}`;
+    return `https://content.monovrc.com/monovrc/${name}`;
   }
 
   async GetFilesByDir(res: e.Response, name: string) {
     const data:string[] = [];
     const path = name.endsWith('/')? name : name + '/';
+    console.log(await this.minioClient.bucketExists('monovrc'));
     const files = this.minioClient.listObjectsV2('monovrc', path, false);
-    files.on('error', function () {res.send({message: 'Error'})});
-    files.on('data', function (obj) { data.push(`http://content.monovrc.com/monovrc/${obj['name']}`)});
+    files.on('error', function () {res.status(500).json({message: 'Error'})});
+    files.on('data', function (obj) { data.push(`https://content.monovrc.com/monovrc/${obj['name']}`)});
     files.on('end', function (obj) {
       console.log(data);
       res.status(200).json({urls: data});
     });
   }
+
 }

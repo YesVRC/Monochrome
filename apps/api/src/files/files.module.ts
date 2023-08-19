@@ -13,8 +13,9 @@ import {MinioModule} from "@svtslv/nestjs-minio";
           // url: 'http://minio:password@localhost:9000',
           accessKey: configService.get('MINIO_ACCESS_KEY'),
           secretKey: configService.get('MINIO_SECRET_KEY'),
-          endPoint: configService.get('MINIO_ENDPOINT'),
-          useSSL: true,
+          port: (process.env.PROD === 'true')? parseInt(configService.get('MINIO_PORT')) : 80,
+          endPoint: (process.env.PROD === 'true')? configService.get('MINIO_ENDPOINT_PROD') : configService.get('MINIO_ENDPOINT'),
+          useSSL: false,
         },
       }),
       inject: [ConfigService]

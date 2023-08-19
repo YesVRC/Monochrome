@@ -5,16 +5,8 @@
 </script>
 
 <div class="container h-full mx-auto flex flex-col justify-start items-center p-6">
-	<h1 class="neon-success px-2 rounded-xl">Monochrome VRC</h1>
-	<h2 class="underline neon-error">Change this text lol.</h2>
-	<h2>
-Lorem Ipsum Placeholder
-	</h2>
-	<br/>
-	<h2>
-		wawa
-	</h2>
-
+	<h1>Monochrome VRC</h1>
+	<p>Fun Events, Unity Help, and more!</p>
 </div>
 
 <style>

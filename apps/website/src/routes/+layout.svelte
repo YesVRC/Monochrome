@@ -13,7 +13,7 @@
     } from "@skeletonlabs/skeleton";
     import type {PopupSettings} from "@skeletonlabs/skeleton";
 
-    import '../theme.css'
+    import '../theme.css';
     import '@skeletonlabs/skeleton/styles/all.css';
     import '../app.postcss';
     import {posterStore} from "../store/store.js";
@@ -51,12 +51,15 @@
 
             <div class="m-auto w-fit h-full flex flex-row text-center">
                 <a class="cursor-pointer neon-text-surface hover:neon-text-primary p-4" href="/connect">Connect</a>
-                <a class="cursor-pointer neon-text-surface hover:neon-text-primary p-4" href="/about">About</a>
+                <!--<a class="cursor-pointer neon-text-surface hover:neon-text-primary p-4" href="/about">About</a>-->
                 <a class="cursor-pointer neon-text-surface hover:neon-text-primary p-4" href="/events">Events</a>
             </div>
         </AppBar>
     </svelte:fragment>
-    <slot/>
+        <slot/>
+    <img src="/stacked-waves-haikei_inv.svg" class="opacity-30 fixed bottom-0 left-0 w-full z-[-1]"/>
+
+
     <!-- Page Route Content -->
     <Modal/>
     <Toast/>
@@ -64,11 +67,26 @@
 </AppShell>
 
 <svelte:head>
+    <!-- Primary Meta Tags -->
     <title>MonoVRC</title>
-    <meta content="Monochrome VRC" property="og:title" />
-    <meta content="Events, Unity Help, and more!" property="og:description" />
-    <meta content="https://monovrc.com" property="og:url" />
-    <meta content="/favico" property="og:image" />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta content="#9900FF" data-react-helmet="true" name="theme-color" />
+    <meta name="title" content="MonoVRC" />
+    <meta name="description" content="Events, Unity Help, and more!" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.monovrc.com/" />
+    <meta property="og:title" content="MonoVRC" />
+    <meta property="og:description" content="Events, Unity Help, and more!" />
+    <meta property="og:image" content="https://content.monovrc.com/monovrc/v3_VRC_Background.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="http://www.monovrc.com/" />
+    <meta property="twitter:title" content="MonoVRC" />
+    <meta property="twitter:description" content="Events, Unity Help, and more!" />
+    <meta property="twitter:image" content="https://content.monovrc.com/monovrc/v3_VRC_Background.png" />
+    <meta content="#2c2c2c" data-react-helmet="true" name="theme-color" />
+
+
+    <!-- Meta Tags Generated with https://metatags.io -->
 </svelte:head>
