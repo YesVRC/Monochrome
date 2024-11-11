@@ -1,1 +1,7 @@
 
+[submodule "API-GO"]
+	path = API-GO
+	url = ./API-GO
+[submodule "Monochrome-Api-Go"]
+	path = Monochrome-Api-Go
+	url = https://github.com/YesVRC/Monochrome-Api-Go.git
