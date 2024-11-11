@@ -2,3 +2,6 @@
 [submodule "Monochrome-Api-Go"]
 	path = Monochrome-Api-Go
 	url = https://github.com/YesVRC/Monochrome-Api-Go.git
+[submodule "Monochrome-Web-Svelte"]
+	path = Monochrome-Web-Svelte
+	url = https://github.com/YesVRC/Monochrome-Web-Svelte.git
